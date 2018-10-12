@@ -1,0 +1,95 @@
+@import "mainColor";
+
+// 菜单栏区域 
+.mmb_menu {
+  padding: 10px 0 5px 0;
+  .row {
+    padding: 10px 0;
+    background-color: #fff;
+    
+  }
+  .menu_item {
+    margin-top: 15px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    a {
+      display: block;
+    }
+    img {
+      width: .5rem;
+      height: .5rem;
+    }
+    p {
+      margin-top: 5px;
+    }
+  }
+}
+.menu_item.visible {
+  display: block !important;
+}
+.recommen {
+    width: 100%;
+    height: .35rem;
+    line-height: .35rem;
+    background-color: @colorLight;
+    padding: 0 10px;
+
+    span {
+      font-size: 16px;
+      color: #fff;
+    }
+    img {
+      width: .2rem;
+      height: .2rem;
+    }
+  }
+  // 折扣商品区 .
+.mmb_product {
+  background-color: #fff;
+  margin-bottom: 10px;
+
+  .content li {
+    border-bottom: 1px solid #ccc;
+    padding: 14px 8px;
+    .pic {
+      float: left;
+      width: 1.1rem;
+      height: 1rem;
+    }
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+    .info {
+      overflow: hidden;
+      .title {
+        min-height: .57rem;
+        font-size: 15px;
+
+      }
+      
+      .price {
+        color: @colorDeep;
+      }
+    }
+    .other {
+      color: #a1a1a1;
+      .icon_info {
+        margin-right: 3px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .more_bar a {
+    display: block;
+    height: .32rem;
+    line-height: .32rem;
+    margin: 10px 10px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+}

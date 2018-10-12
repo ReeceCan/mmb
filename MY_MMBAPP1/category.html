@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入字体图标  -->
+  <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/category.css">
+
+</head>
+
+<body>
+  <div class="mmb_container">
+    <!-- 头部  -->
+    <header class="mmb_header clearfix">
+      <div class="logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索栏 . -->
+    <section class="mmb_searh">
+      <form action="#" class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+      </form>
+    </section>
+
+    <!-- 分类区域 -->
+    <section id="mmb_category">
+      <div class="row" id="row">
+        <!-- 挖个大坑  -->
+      </div>
+    </section>
+
+    <!-- 底部  -->
+    <footer class="mmb_foot">
+      <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="toTop">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+      </div>
+      <div class="foot_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+
+    <!-- 大标题模板引擎   -->
+    <script type="text/html" id="category_title_tmp">
+     
+      <ul class="category_title">
+        {{ each result v i }}
+          <li>
+            <a href="#" data-id="{{ v.titleId }}">{{ v.title }}</a>
+            <ul class="category_content clearfix"></ul>
+          </li>
+        {{ /each }}
+      </ul>
+      
+    </script>
+
+    <!-- 大标题对应商品分类 模板引擎 -->
+    <script type="text/html" id="category_content_tmp">      
+        {{ each result v i }}
+          <li>
+            <a href="productlist.html?categoryid={{ v.categoryId }}&category={{v.category}}&pageid=1">{{ v.category }}</a>
+          </li>
+        {{ /each }}
+    </script>
+
+  </div>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/adaptor.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="js/category.js"></script>
+</body>
+
+</html>

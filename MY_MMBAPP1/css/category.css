@@ -1,0 +1,55 @@
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: #f1f1f1;
+}
+/* 分类区域  */
+#mmb_category {
+  background-color: #ededed;
+}
+#mmb_category .row {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#mmb_category .category_title > li > a {
+  display: block;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  padding-left: 16px;
+  background: url("http://www.zuyushop.com/wap/images/arrow1.gif") no-repeat right;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#mmb_category .category_title > li > a:last-child {
+  border: none;
+}
+#mmb_category .category_title > li:last-child li {
+  border-bottom: none;
+}
+#mmb_category .category_content {
+  background-color: #f9f9f9;
+  display: none;
+}
+#mmb_category .category_content li {
+  width: 33.3%;
+  height: .4rem;
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: .4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+#mmb_category .category_content li a {
+  display: block;
+}
+#mmb_category .category_content li:nth-child(3n) {
+  border-right: none;
+}
+#mmb_category .category_content.visible {
+  display: block;
+}

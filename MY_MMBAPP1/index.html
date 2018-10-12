@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入字体图标  -->
+  <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+  <div class="mmb_container">
+    <!-- 头部  -->
+    <header class="mmb_header clearfix">
+      <div class="logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索栏 . -->
+    <section class="mmb_searh">
+      <form action="#" class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+      </form>
+    </section>
+    <!-- 菜单栏  -->
+    <section class="mmb_menu">
+      <div id="menu" class="row clearfix">
+        <!-- 挖个坑 -->
+        
+      </div>
+
+    </section>
+    <!-- 产品   -->
+    <section class="mmb_product">
+      <!-- 头部 -->
+      <div class="recommen clearfix">
+        <span class="fl">超值折扣推荐</span>
+        <a href="#" class="fr">
+          <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </a>
+      </div>
+      <!-- 产品内容  -->
+      <div class="content" id="zhekou">
+        <!-- 挖个坑  -->
+      </div>
+      <!-- 更多  -->
+      <div class="more_bar">
+        <a href="#">
+          更多优惠信息>>
+        </a>
+      </div>
+    </section>
+
+    <!-- 品牌排行 -->
+    <section class="recommen clearfix">
+        <span class="fl">品牌排行</span>
+        <a href="#" class="fr">
+          <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </a>
+    </section>
+        
+    <!-- 底部  -->
+    <footer class="mmb_foot">
+      <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="toTop"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+      </div>
+      <div class="foot_bottom">
+       <p> 
+         <a href="javascript:;" style="color: red">手机APP下载</a>
+         <a href="javascript:;">慢慢买手机版</a>
+         -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+
+    <!-- 菜单栏模板引擎  -->
+    <script type="text/html" id="menu_tmp">
+      {{ each result v i }}  
+        <div class="menu_item" style="{{ if i >= 8 }}display: none{{ /if }}">      
+          <a href="{{ v.titlehref }}" id="{{ v._id }}">
+            {{@v.img}}
+            <p>{{ v.name }}</p>
+          </a>
+        </div>
+      {{ /each }}
+    </script>
+
+    <!-- 折扣商品渲染模板引擎  -->
+    <script type="text/html" id="product_tmp">
+      {{ each result v i }}
+      <ul>
+        <li>
+          <a href="#" class="clearfix">
+            <div class="pic">
+              {{@v.productImg2}}
+            </div>
+            <div class="info">
+              <div class="title">
+                {{ v.productName }}
+                <span class="price">{{ v.productPinkage }}</span>
+              </div>
+              <div class="other clearfix">
+                <span class="fl">{{ v.productFrom }} | {{ v.productTime }}</span>
+                <span class="fr">
+                  <i class="icon_info iconfont icon-xinxi"></i>
+                  {{ v.productComCount.match(/\d+/g).join("") }}
+                </span>
+              </div>
+            </div>
+          </a>
+        </li> 
+      </ul>
+      {{ /each }}
+    </script>
+
+  </div>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/adaptor.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

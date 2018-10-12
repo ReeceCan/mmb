@@ -1,0 +1,90 @@
+.product_list_title {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 38px;
+  line-height: .36rem;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), to(#ebebeb));
+  background-image: linear-gradient(to bottom, #ffffff 0, #ebebeb 100%);
+}
+.product_list_title a.select {
+  display: block;
+  width: .6rem;
+  height: .28rem;
+  line-height: 28px;
+  text-align: center;
+  border: none;
+  margin-top: 4px;
+  border-radius: 5px;
+  border-bottom: 1px solid #bababa;
+  -webkit-box-shadow: 0 1px 2px #888;
+          box-shadow: 0 1px 2px #888;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d7d7d7), to(#f5f5f5));
+  background-image: linear-gradient(to bottom, #d7d7d7 0, #f5f5f5 100%);
+}
+.product_list {
+  background-color: #fff;
+}
+.product_list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.product_list .pic {
+  width: 1.1rem;
+}
+.product_list .pic img {
+  width: 1rem;
+  height: 1rem;
+}
+.product_list .info {
+  padding-left: 1rem;
+  font-size: 14px;
+  line-height: 24px;
+}
+.product_list .info .price {
+  font-size: 18px;
+  color: #ef6400;
+}
+.product_list .info .other {
+  color: #aaaac2;
+  font-size: 12px;
+}
+.product_list .info .other span {
+  margin-right: 10px;
+}
+.product_list .page {
+  height: .36rem;
+  margin-top: 10px;
+}
+.product_list .page span {
+  float: left;
+  display: block;
+  width: 33.3%;
+  text-align: center;
+  font-size: 14px;
+}
+.product_list .page a {
+  display: block;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f1f1f1), to(#d4d4d4));
+  background-image: linear-gradient(to bottom, #f1f1f1 0, #d4d4d4 100%);
+  width: .82rem;
+  height: .33rem;
+  line-height: .33rem;
+  -webkit-box-shadow: 0 0 1px #666;
+          box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+.product_list .page select {
+  padding: 0 20px;
+  height: .34rem;
+  line-height: .34rem;
+  font-size: 14px;
+  margin-left: .1rem;
+}
