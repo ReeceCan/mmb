@@ -1,0 +1,231 @@
+// 国内折扣详情页和商品详情页公共部分
+@import "mainColor";
+
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: @colorContain;
+}
+
+// 头部
+.mmb_header {
+  padding: 0 .55rem;
+  height: .44rem;
+  line-height: .44rem;
+  position: relative;
+  .back,
+  .appdown {
+    width: .55rem;
+    height: .44rem;
+    position: absolute;
+    top: 0;
+   
+  }
+  .back {
+    left: 0;
+  }
+  .appdown {
+    right: 0; 
+    padding: 0;
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+    
+  }
+  a {
+    display: block;
+    width: .55rem;
+    height: .44rem;
+  }
+  h1 {
+    width: 100%;
+    height: .44rem;
+    line-height: .44rem;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }  
+}
+
+// 商品详情部分 
+.mmb_cu_content {
+  .cu_content {
+    padding: 4px 10px;
+    .title {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+    .price {
+      color: #ff6c00;
+      display: block;
+      font-size: 15px;
+    }
+    .info {
+      margin: 12px 0;
+      color: #999;
+      font-size: 12px;
+    }
+  }
+  .content {
+    .picwrap {
+      float: right;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-top: 12px;
+      margin-left: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      margin: 6px 0;
+      font-size: 16px;
+      color: #606060;
+      line-height: 24px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .conn {
+      margin-bottom: 20px;
+    }
+  }
+  span.s {
+    display: block;
+    padding-left: 16px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .drop {
+    width: 1.38rem;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border: 0 1px 1px 1px;
+    border-style: solid;
+    border-top: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+    li a {
+      display: block;
+      padding: 0 10px;
+      box-sizing: border-box;
+      span {
+        display: block;
+        padding: 0 10px;
+        border-bottom: 1px dashed #c0c0c0;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      strong {
+        color: #f27b04;
+        font-weight: normal;
+        float: right;
+      }
+    }
+  }
+  .golink a {
+    height: .3rem;
+    display: block;
+    margin: 20px 10px;
+    font-size: 14px;
+    line-height: .3rem;
+    background-color: #FF9000;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .ewm {
+    margin: 20px 10px;
+    img {
+      width: 100%;
+    }
+  }
+
+  
+  .tit {
+    margin: 6px 8px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  
+  .reply {
+    padding: 6px 8px;
+    box-sizing: border-box;
+    .form {
+      border: 2px solid #ECEAE8;
+      width: 98%;
+      margin: 0 auto;
+      border-radius: 2px;
+      padding: 4px 0 0 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      border: none;
+      resize: none;
+      line-height: 22px;
+      font-size: 14px;
+      color: #666;
+      height: .68rem;
+    }
+  }
+  .ctrl {
+    width: 100%;
+    height: .36rem;
+    border-top: 1px solid #ECEAE8;
+    box-sizing: border-box;
+    background-color: #fbfbfb;
+    position: relative;
+    .tjdp {
+      width: 1rem;
+      font-size: 14px;
+      color: #fff;
+      background-color: #ff841d;
+      height: .39rem;
+      border: 2px solid #ff841d;
+      border-left: none;
+      border-top: none;
+      border-radius: 0 0 2px 0;
+      position: absolute;
+      right: -2px;
+      bottom: -2px;
+    }
+  }
+  .list li {
+    padding: 18px 10px;
+    font-size: 14px;
+    
+    .userimg {
+      width: .4rem;
+      height: .4rem;
+      float: left;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .con {
+      padding-left: 10px;
+      overflow: hidden;
+    }
+    .username {
+      color: #5997c0;
+      margin-bottom: 6px;
+      float: left;
+    }
+    .time {
+      color: #999;
+      float: right;
+    }
+    .content {
+      color: #606060;
+      font-size: 15px;
+    }
+  }
+}

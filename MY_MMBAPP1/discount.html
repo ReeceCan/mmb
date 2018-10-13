@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/discountCommen.css">
-  <link rel="stylesheet" href="css/moneyproduct.css">
+  <link rel="stylesheet" href="css/discount.css">
 
 </head>
 
@@ -21,7 +21,7 @@
       <div class="back">
         <a href="index.html"></a>
       </div>
-      <h1>
+      <h1>   			
         国内折扣
       </h1>
       <div class="appdown fr">
@@ -32,64 +32,54 @@
     </header>
 
     <!-- 商品详情部分   -->
-    <div class="mmb_cu_content" id="mmb_cu_content">
+    <div class="mmb_cu_content" id="discount_product">
       <!-- 挖个巨坑 -->
     </div>
-
+        
     <!-- 底部  -->
     <footer class="mmb_foot">
       <div class="foot_top clearfix">
         <a href="#">登录</a>
         <a href="#">注册</a>
-        <a href="#" id="toTop">
-          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+        <a href="#" id="toTop"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
       </div>
       <div class="foot_bottom">
-        <p>
-          <a href="javascript:;" style="color: red">手机APP下载</a>
-          <a href="javascript:;">慢慢买手机版</a>
-          -- 掌上比价平台
-        </p>
-        <p>m.manmanbuy.com</p>
+       <p> 
+         <a href="javascript:;" style="color: red">手机APP下载</a>
+         <a href="javascript:;">慢慢买手机版</a>
+         -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
       </div>
     </footer>
   </div>
 
   <!-- 商品详情模板  -->
-  <script type="text/html" id="cu_content_tmp">
+  <script type="text/html" id="discount_tmp">
     {{ each result v i }}
     <div class="cu_content">
       <h3 class="title">
         {{ v.productName }}
       </h3>
+      <h4 class="price">{{ v.productPrice }}</h4>
       <div class="info">
         <span class="mall">{{ v.productFrom }}</span>
         <span class="addtime">{{ v.productTime }}</span>
         <span class="author">{{ v.productTips }}</span>
       </div>
       <div class="content">
-        
         <div class="picwrap">
-          {{@v.productImgLg}}
+          {{@v.productImg}}
         </div>
         <div class="conn">
           <p>{{ v.productInfo }}</p>
           <p>{{ v.productInfo1 }}</p>
           <p>
-            {{@v.productImgLg}}
+            {{@v.productImg}}
           </p>
         </div>
       </div>
-      <div class="content_center">
-        <div class="area">
-          <span class="s">
-            <div class="drop">
-              {{@v.productCity}}
-            </div>
-            
-          </span>
-        </div>
-      </div>
+      
       <div class="golink">
         <a href="#">前往购买</a>
       </div>
@@ -104,7 +94,7 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./js/adaptor.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
-  <script src="js/moneyproduct.js"></script>
+  <script src="js/discount.js"></script>
 </body>
 
 </html>

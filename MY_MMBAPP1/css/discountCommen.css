@@ -1,0 +1,214 @@
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: #f1f1f1;
+}
+.mmb_header {
+  padding: 0 .55rem;
+  height: .44rem;
+  line-height: .44rem;
+  position: relative;
+}
+.mmb_header .back,
+.mmb_header .appdown {
+  width: .55rem;
+  height: .44rem;
+  position: absolute;
+  top: 0;
+}
+.mmb_header .back {
+  left: 0;
+}
+.mmb_header .appdown {
+  right: 0;
+  padding: 0;
+}
+.mmb_header .appdown img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.mmb_header a {
+  display: block;
+  width: .55rem;
+  height: .44rem;
+}
+.mmb_header h1 {
+  width: 100%;
+  height: .44rem;
+  line-height: .44rem;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.mmb_cu_content .cu_content {
+  padding: 4px 10px;
+}
+.mmb_cu_content .cu_content .title {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+.mmb_cu_content .cu_content .price {
+  color: #ff6c00;
+  display: block;
+  font-size: 15px;
+}
+.mmb_cu_content .cu_content .info {
+  margin: 12px 0;
+  color: #999;
+  font-size: 12px;
+}
+.mmb_cu_content .content .picwrap {
+  float: right;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+.mmb_cu_content .content .picwrap img {
+  width: 100%;
+  height: 100%;
+}
+.mmb_cu_content .content p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #606060;
+  line-height: 24px;
+}
+.mmb_cu_content .content p img {
+  max-width: 100%;
+}
+.mmb_cu_content .content .conn {
+  margin-bottom: 20px;
+}
+.mmb_cu_content span.s {
+  display: block;
+  padding-left: 16px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.mmb_cu_content .drop {
+  width: 1.38rem;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  border: 0 1px 1px 1px;
+  border-style: solid;
+  border-top: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+}
+.mmb_cu_content .drop li a {
+  display: block;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.mmb_cu_content .drop li a span {
+  display: block;
+  padding: 0 10px;
+  border-bottom: 1px dashed #c0c0c0;
+  font-size: 12px;
+  line-height: 20px;
+}
+.mmb_cu_content .drop li a strong {
+  color: #f27b04;
+  font-weight: normal;
+  float: right;
+}
+.mmb_cu_content .golink a {
+  height: .3rem;
+  display: block;
+  margin: 20px 10px;
+  font-size: 14px;
+  line-height: .3rem;
+  background-color: #FF9000;
+  text-align: center;
+  border-radius: 5px;
+}
+.mmb_cu_content .ewm {
+  margin: 20px 10px;
+}
+.mmb_cu_content .ewm img {
+  width: 100%;
+}
+.mmb_cu_content .tit {
+  margin: 6px 8px;
+  font-size: 16px;
+  line-height: 32px;
+}
+.mmb_cu_content .reply {
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+.mmb_cu_content .reply .form {
+  border: 2px solid #ECEAE8;
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+.mmb_cu_content .reply textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  line-height: 22px;
+  font-size: 14px;
+  color: #666;
+  height: .68rem;
+}
+.mmb_cu_content .ctrl {
+  width: 100%;
+  height: .36rem;
+  border-top: 1px solid #ECEAE8;
+  box-sizing: border-box;
+  background-color: #fbfbfb;
+  position: relative;
+}
+.mmb_cu_content .ctrl .tjdp {
+  width: 1rem;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff841d;
+  height: .39rem;
+  border: 2px solid #ff841d;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 2px 0;
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+}
+.mmb_cu_content .list li {
+  padding: 18px 10px;
+  font-size: 14px;
+}
+.mmb_cu_content .list li .userimg {
+  width: .4rem;
+  height: .4rem;
+  float: left;
+}
+.mmb_cu_content .list li .userimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.mmb_cu_content .list li .con {
+  padding-left: 10px;
+  overflow: hidden;
+}
+.mmb_cu_content .list li .username {
+  color: #5997c0;
+  margin-bottom: 6px;
+  float: left;
+}
+.mmb_cu_content .list li .time {
+  color: #999;
+  float: right;
+}
+.mmb_cu_content .list li .content {
+  color: #606060;
+  font-size: 15px;
+}

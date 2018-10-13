@@ -17,15 +17,15 @@ $(function () {
 
    $.ajax({
      type: "get",
-     url: "http://127.0.0.1:9090/api/getmoneyctrlproduct",
+     url: "http://127.0.0.1:9090/api/getdiscountproduct",
      data: {productid: productid},
      dataType: "json",
      success: function (info) {
         console.log(info);
          // 绑定模板
-        var htmlStr = template("cu_content_tmp",info);
+        var htmlStr = template("discount_tmp",info);
         // 将数据渲染到页面中  
-        $("#mmb_cu_content").html(htmlStr);
+        $("#discount_product").html(htmlStr);
      }
    })
 })
