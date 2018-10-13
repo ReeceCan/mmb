@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入字体图标  -->
+  <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/inlanddiscount.css">
+
+</head>
+
+<body>
+  <div class="mmb_container">
+    <!-- 头部  -->
+    <header class="mmb_header clearfix">
+      <div class="back">
+        <a href="index.html"></a>
+      </div>
+      <h1>   			
+        国内折扣
+      </h1>
+      <div class="appdown fr">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <!-- 折扣商品列表部分   -->
+    <div class="recommen_product">
+      <div class="discount_product" id="discount_product">
+       <!-- 挖个坑 通过模板引擎渲染  -->
+      </div>
+
+    </div>
+        
+    <!-- 底部  -->
+    <footer class="mmb_foot">
+      <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="toTop"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+      </div>
+      <div class="foot_bottom">
+       <p> 
+         <a href="javascript:;" style="color: red">手机APP下载</a>
+         <a href="javascript:;">慢慢买手机版</a>
+         -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 折扣商品模板 -->
+  <script type="text/html" id="discount_product_tmp">
+    <ul class="clearfix">
+      {{ each result v i }}
+      <li>
+        <a href="#">
+          <div class="pic">
+            {{@v.productImg}}
+          </div>
+          <div class="info">
+            <div class="info_title txt-over-2">
+              {{ v.productName }}
+            </div>
+            <div class="info_price txt-over-1">
+              {{ v.productPrice }}
+            </div>
+            <div class="info_other">
+              {{ v.productFrom }} | {{ v.productTime }}
+            </div>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+    </ul>
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/adaptor.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="js/inlanddiscount.js"></script>
+</body>
+
+</html>

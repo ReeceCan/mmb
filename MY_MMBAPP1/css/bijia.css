@@ -1,0 +1,102 @@
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: #f1f1f1;
+}
+.mmb_bijia {
+  background-color: #fff;
+}
+.mmb_bijia .product_name {
+  padding: .16rem .16rem 0 .16rem;
+  font-size: 17px;
+  text-align: center;
+  line-height: 26px;
+}
+.mmb_bijia .product_img {
+  position: relative;
+}
+.mmb_bijia .product_img img {
+  display: block;
+  margin: 0 auto;
+}
+.mmb_bijia .product_collect {
+  position: absolute;
+  right: .24rem;
+  bottom: .2rem;
+}
+.mmb_bijia .product_collect a img {
+  width: .4rem;
+  height: .4rem;
+}
+.mmb_bijia .tab {
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+.mmb_bijia .tab li {
+  float: left;
+  width: 33.3%;
+  border-right: 1px solid #c14d00;
+}
+.mmb_bijia .tab li a {
+  display: block;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  background-color: #ffc424;
+  color: #fff;
+  font-size: 14px;
+}
+.mmb_bijia .tab li:nth-child(3) {
+  border: none;
+}
+.mmb_bijia .tab li.current a {
+  background-color: #ff9c1c;
+}
+.mmb_bijia table {
+  margin-top: 12px;
+}
+.mmb_bijia .note {
+  padding: 10px;
+  color: #888;
+}
+.product_comment .title {
+  margin-top: 5px;
+  border-top: 4px solid #7a7a7a;
+  background-color: #dbdbdb;
+  height: .34rem;
+  width: 100%;
+  line-height: .33rem;
+  text-align: center;
+  font-size: 14px;
+}
+.product_comment .title div {
+  border-top: 1px solid #fff;
+}
+.product_comment .com_list li {
+  padding: 10px 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.product_comment .com_list li span {
+  color: #7f6666;
+}
+.product_comment .com_list li .comment_content {
+  color: #000;
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 22px;
+}
+.product_comment .more {
+  margin-top: 16px;
+  padding: 0 8px;
+}
+.product_comment .more a {
+  width: 100%;
+  height: .32rem;
+  line-height: .32rem;
+  text-align: center;
+  display: block;
+  box-shadow: 0 0 1px #666;
+  font-size: 14px;
+  background-image: linear-gradient(to bottom, #f1f1f1 0, #d4d4d4 100%);
+}

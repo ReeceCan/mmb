@@ -14,21 +14,45 @@ $(function () {
      var value = v.split("=")[1];//值
      obj[key] = value;
 
-  })
+  });
   // console.log(obj);
   var categoryid = obj.categoryid;
   var pageid = obj.pageid;
   
-  // 已进入页面渲染一次 
+  // 路径导航渲染 
+  
+  // 发送ajax请求 
+  $.ajax({
+    type: "get",
+    url: "http://127.0.0.1:9090/api/getcategorybyid",
+    data: {categoryid: categoryid},
+    dataType: "json",
+    success: function (info) {
+      console.log(info);
+      
+      // 绑定模板
+      var htmlStr = template("nav_tmp",info);
+      // 将数据渲染到页面中  
+      $("#nav").html(htmlStr);
+    }
+  })
+
+  // 一进入页面渲染一次 
   render(categoryid,pageid);
 
   // 功能2 根据下拉选项跳转到对应页面 
   // 检测select框的变化 
-  // 获取值
-  // 通过获取的值渲染页面   
+  // 获取值 对应的option添加属性selected
+  // 通过获取的值渲染页面 
+  // 获取option值 
+  // var $options = $("#selectPage");
+  // console.log($options);
   
-  var page = $("#selectPage").val();
-  console.log(page);
+  
+  // var a = document.querySelectorAll("#back");
+  // console.log(a);
+  
+  
   
 
   // 功能3 点击上一页 跳转到上一页面  点击下一页 跳转到下一页面 
@@ -50,8 +74,11 @@ $(function () {
       },
       dataType: "json",
       success: function (info) {
-         console.log(info);
-        // 绑定模板引擎
+        console.log(info);
+        var pageTotal = Math.ceil(info.totalCount/info.pagesize);
+        info.pageToatal = pageTotal;
+        
+        // 绑定模板
         var htmlStr = template("product_list_tmp",info);
         // 将数据渲染到页面中  
         $("#product").html(htmlStr);

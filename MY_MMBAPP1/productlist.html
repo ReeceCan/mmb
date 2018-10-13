@@ -37,31 +37,13 @@
     </section>
     <!-- 商品列表部分  -->
     <section class="mmb_productlist" id="product_list">
-      <div class="product_list_title clearfix">
-        <a href="index.html">首页</a>
-        >
-        <a href="category.html">全部分类</a>
-        >
-        <a href="#">电视</a>
-
-        <a href="#" class="select fr">筛选</a>
+      <div class="product_list_title clearfix" id="nav">
+        <!-- 挖个坑 -->
       </div>
-      <div class="product_list">
-        <ul id="product">
-          <!-- 挖个坑 -->
-         
-        </ul>
-        <div class="page clearfix">
-          <span class="fl" id="back"><a href="#">上一页</a></span>
-          <span>
-            <select name="select" id="selectPage" class="fl">
-              <option value="1" selected>1/3</option>
-              <option value="2" selected>2/3</option>
-              <option value="3" selected>3/3</option>
-            </select>
-          </span>
-          <span class="fr" id="go"><a href="#">下一页</a></span>
-        </div>
+      <div class="product_list" id="product">
+       
+          <!-- 挖个大坑 -->
+        
       </div>
     </section>
 
@@ -82,26 +64,54 @@
         <p>m.manmanbuy.com</p>
       </div>
     </footer>
+    
+    <!-- 路径导航模板  -->
+    <script type="text/html" id="nav_tmp">
+      {{ each result v i }}
+        <a href="index.html">首页</a>
+        >
+        <a href="category.html">全部分类</a>
+        >
+        <a href="#" id="cate" data-cate="category">{{ v.category }}</a>
+      {{ /each }}
+      <a href="#" class="select fr">筛选</a>
+    </script>
+
 
     <!-- 产品模板  -->
     <script type="text/html" id="product_list_tmp">
-      {{ each result v i }}
-        <li class="clearfix" data-totalPage="{{ totalCount }}">
-          <div class="pic fl">
-            {{@v.productImg}}
-          </div>
-          <div class="info">
-            <div class="title">
-              {{ v.productName }}
-            </div>
-            <div class="price">{{ v.productPrice }}</div>
-            <div class="other">
-              <span>{{ v.productQuote }}</span>
-              <span>{{ v.productCom }}</span>
-            </div>
-          </div>
-        </li>
-      {{ /each }}
+      <ul id="">
+        {{ each result v i }}
+          <li class="clearfix">
+            <a href="bijia.html?productid={{ v.productId }}">
+              <div class="pic fl">
+                  {{@v.productImg}}
+              </div>
+              <div class="info">
+                <div class="title">
+                  {{ v.productName }}
+                </div>
+                <div class="price">{{ v.productPrice }}</div>
+                <div class="other">
+                  <span>{{ v.productQuote }}</span>
+                  <span>{{ v.productCom }}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        {{ /each }}
+      </ul>
+      <div class="page clearfix">
+        <span class="fl" id="back"><a href="#">上一页</a></span>
+        <span>
+          <select name="select" id="selectPage" class="fl">
+            <%for(i = 1; i <= pageToatal; i ++) {%>
+              <option value="<%=i%>" <%if(i==1){%>selected<%}%>><%=i%>/<%=pageToatal%></option>
+            <%}%>
+          </select>
+        </span>
+        <span class="fr" id="go"><a href="#">下一页</a></span>
+      </div>
     </script>
 
   </div>
