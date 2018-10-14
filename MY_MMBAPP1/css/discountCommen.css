@@ -20,6 +20,12 @@
 .mmb_header .back {
   left: 0;
 }
+.mmb_header .back a {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  line-height: .44rem;
+}
 .mmb_header .appdown {
   right: 0;
   padding: 0;

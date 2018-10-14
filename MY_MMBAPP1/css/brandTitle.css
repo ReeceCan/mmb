@@ -1,0 +1,22 @@
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: #f1f1f1;
+}
+.mmb_category {
+  background-color: #fff;
+}
+.mmb_category .paihang {
+  font-size: 16px;
+  color: #874604;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+#brand_title li > a {
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入字体图标  -->
+  <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/discountCommen.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+
+</head>
+
+<body>
+  <div class="mmb_container">
+    <!-- 头部  -->
+    <header class="mmb_header clearfix">
+      <div class="back">
+        <a href="index.html"></a>
+      </div>
+      <h1>
+        白菜价-淘宝内部券
+      </h1>
+      <div class="appdown fr">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    <!-- 商品详情部分   -->
+    <div class="mmb_baicaijia" id="mmb_baicaijia">
+      <div class="bcj_head">
+        <div class="bcj_title">
+          <div class="ul-wapper">
+            <ul class="clearfix" id="bcj_head_ul">
+              <!-- 挖个坑 -->
+            </ul>
+          </div>
+        </div>
+        <div class="searchbtn">
+          <i class="iconfont icon-sousuofenlei"></i>
+        </div>
+      </div>
+      <div class="bcj_list" id="bcj_list">
+        <!-- 挖个坑 -->
+      </div>
+    </div>
+
+    <!-- 底部  -->
+    <footer class="mmb_foot">
+      <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="toTop">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+      </div>
+      <div class="foot_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 导航模板 -->
+  <script type="text/html" id="baicaijia_head_tmp">
+    {{ each result v i }}
+      <li <%if(i == 0) {%>class="current"<%}%> data-id="{{ v.titleId }}"><a href="#">{{ v.title }}</a></li>    
+    {{ /each }}
+  </script>
+
+  <!-- 商品列表模板  -->
+  <script type="text/html" id="baicaijia_list_tmp">
+    <ul>
+      {{ each result v i }}
+      <li class="ui-border-tb clearfix">
+        <a href="#"></a>
+        <div class="pic fl">
+          {{@v.productImg}}
+        </div>
+        <div class="info">
+          <div class="i">
+            <div class="t">
+              {{@v.productName}}
+            </div>
+            <div class="pr">
+              <i>券后</i>
+              {{@v.productPrice}}
+            </div>
+          </div>
+          <div class="o">
+            {{@v.productCouponRemain}}
+          </div>
+          <div class="b clearfix">
+            <div class="q fl">
+              {{@v.productCoupon}}
+            </div>
+            <div class="g fr">
+              {{@v.productHref}}
+            </div>
+          </div>    
+        </div>
+      </li>
+      {{ /each }}
+    </ul>
+  </script>
+  
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/adaptor.js"></script>
+  <!-- 引入区域滚动插件  -->
+  <script src="./lib/iscroll/iscroll.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="js/baicaijia.js"></script>
+</body>
+
+</html>

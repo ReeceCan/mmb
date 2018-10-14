@@ -9,7 +9,7 @@
   <!-- 引入字体图标  -->
   <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/productlist.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
 
 </head>
 
@@ -35,16 +35,22 @@
         <button>搜索</button>
       </form>
     </section>
-    <!-- 商品列表部分  -->
-    <section class="mmb_productlist" id="product_list">
+
+    <section class="nav">
+      <!-- 路径导航  -->
       <div class="product_list_title clearfix" id="nav">
-        <!-- 挖个坑 -->
-        
+          <!-- 挖个坑 -->
+          <a href="index.html">首页</a>
+          >
+          <a href="category.html">全部分类</a>
+          >
       </div>
-      <div class="product_list" id="product">
-       
-          <!-- 挖个大坑 -->
-        
+    </section>
+    <!-- 品牌分类模块 -->
+    <section class="mmb_category">
+      <div class="paihang">热门品牌排行</div>
+      <div class="row" id="brand_title">
+        <!-- 挖个坑  -->
       </div>
     </section>
 
@@ -65,61 +71,24 @@
         <p>m.manmanbuy.com</p>
       </div>
     </footer>
-    
-    <!-- 路径导航模板  -->
-    <script type="text/html" id="nav_tmp">
-      {{ each result v i }}
-        <a href="index.html">首页</a>
-        >
-        <a href="category.html">全部分类</a>
-        >
-        <a href="#" id="cate" data-cate="category">{{ v.category }}</a>
-      {{ /each }}
-      <a href="#" class="select fr">筛选</a>
-    </script>
 
-
-    <!-- 产品模板  -->
-    <script type="text/html" id="product_list_tmp">
-      <ul id="">
+    <!-- 品牌模板  -->
+    <script type="text/html" id="brand_title_tmp">
+      <ul class="category_title">
         {{ each result v i }}
-          <li class="clearfix">
-            <a href="bijia.html?productid={{ v.productId }}">
-              <div class="pic fl">
-                  {{@v.productImg}}
-              </div>
-              <div class="info">
-                <div class="title">
-                  {{ v.productName }}
-                </div>
-                <div class="price">{{ v.productPrice }}</div>
-                <div class="other">
-                  <span>{{ v.productQuote }}</span>
-                  <span>{{ v.productCom }}</span>
-                </div>
-              </div>
-            </a>
+          <li>
+            <a href="brand.html?brandTitleId={{ v.brandTitleId }}">{{ v.brandTitle }}</a>
           </li>
         {{ /each }}
       </ul>
-      <div class="page clearfix">
-        <span class="fl" id="back"><a href="#">上一页</a></span>
-        <span>
-          <select name="select" id="selectPage" class="fl">
-            <%for(i = 1; i <= pageToatal; i ++) {%>
-              <option value="<%=i%>" <%if(i==1){%>selected<%}%>><%=i%>/<%=pageToatal%></option>
-            <%}%>
-          </select>
-        </span>
-        <span class="fr" id="go"><a href="#">下一页</a></span>
-      </div>
     </script>
+   
 
   </div>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./js/adaptor.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
-  <script src="js/productlist.js"></script>
+  <script src="js/bandTitle.js"></script>
 </body>
 
 </html>

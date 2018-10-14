@@ -1,0 +1,31 @@
+.mmb_container {
+  background-color: #fff;
+}
+.mmb_foot {
+  background-color: #f1f1f1;
+}
+.mmb_header {
+  background-color: #f4483e;
+}
+.coupon_content ul {
+  padding: 10px 0;
+}
+.coupon_content ul li {
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  width: 1.2rem;
+  padding-top: 5px;
+}
+.coupon_content ul li a {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+}
+.coupon_content ul li img {
+  width: .5rem;
+  margin: 0 atuo;
+  max-height: .5rem;
+}

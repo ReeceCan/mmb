@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 引入字体图标  -->
+  <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/brand.css">
+
+</head>
+
+<body>
+  <div class="mmb_container">
+    <!-- 头部  -->
+    <header class="mmb_header clearfix">
+      <div class="logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索栏 . -->
+    <section class="mmb_searh">
+      <form action="#" class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+      </form>
+    </section>
+
+    <section class="mmb_brand">
+      <!-- 路径导航  -->
+      <div class="product_list_title clearfix" id="nav">
+        <a href="index.html">首页</a>
+        >
+        <a href="category.html">全部分类</a>
+        >
+      </div>
+
+      <div class="key_one" id="brand_list">
+        <!-- 挖个坑  -->
+      </div>
+      <div class="key_two" id="product_list">
+        <!-- 挖个坑 -->
+      </div>
+      <div class="key_three" id="product_com">
+        <!-- 挖个坑 -->
+      </div>
+
+    </section>
+
+
+    <!-- 底部  -->
+    <footer class="mmb_foot">
+      <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="toTop">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+      </div>
+      <div class="foot_bottom">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+
+
+    <!-- 品牌模板 -->
+    <script type="text/html" id="brand_list_tmp">
+      <div class="hd">
+        <h3>平板电视哪个牌子好</h3>
+      </div>
+      <div class="brand_list_one">
+        <ul>
+          {{ each result v i }}
+          <li>
+            <a href="#">
+              <em class="top{{ i+1 }}">{{ v.brandId }}</em>
+              <div class="inner">
+                <div class="tit">{{ v.brandName }}</div>
+                <p>{{ v.brandInfo }}</p>
+              </div>
+            </a>
+            <i class="iconfont icon-youjiantou"></i>
+          </li>
+          {{ /each }}
+        </ul>
+      </div>
+    </script>
+
+    <!-- 销量排行渲染  -->
+    <script type="text/html" id="product_list_tmp">
+      <div class="hd">
+        <h3>平板电视产品销量排行</h3>
+      </div>
+      <div class="product_list_two">
+        <ul>
+          {{ each result v i }}
+          <li>
+            <a href="bijia.html?productid={{ v.productId }}" class="clearfix">
+              <div class="pic">
+                {{@v.productImg}}
+              </div>
+              <div class="info">
+                <div class="tit txt-over-3">
+                  {{ v.productName }}
+                </div>
+                <div class="price clearfix">
+                  <em>{{ v.productPrice }}</em>
+                  <div class="start">
+                    <i class="iconfont icon-xingxing"></i>
+                  </div>
+                </div>
+                <div class="other">
+                  <em>{{ v.productQuote }}</em>
+                  <em>{{ v.productCom }}</em>
+                </div>
+              </div>
+            </a>
+          </li>
+          {{ /each }}
+        </ul>
+      </div>
+    </script>
+
+    <!-- 评论渲染 。 -->
+    <script type="text/html" id="product_com_tmp">
+      <div class="hd">
+          <h3>平板电视最新评论</h3>
+        </div>
+        <div class="product_com">
+        <ul>
+          {{ each result v i }}
+          <li>
+            <a href="#">
+              <div class="protit clearfix">
+                <div class="pic">
+                  <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="tit txt-over-3">
+                    乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视
+                  </div>
+                </div>
+              </div>
+              <div class="plbox">
+                <div class="name">{{ v.comName }}：
+                  <div class="start fl"></div>
+                  <i class="fr">{{ v.comTime }}</i>
+                </div>
+                <div class="con">
+                  {{ v.comContent }}
+                  {{ v.comFrom }}
+                </div>
+              </div>
+            </a>
+          </li>
+          {{ /each }}
+        </ul>
+      </div>
+    </script>
+
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./js/adaptor.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/comment/tool.js"></script>
+    <script src="js/brand.js"></script>
+</body>
+
+</html>

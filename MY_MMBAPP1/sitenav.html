@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/discountCommen.css">
-  <link rel="stylesheet" href="css/coupon.css">
+  <link rel="stylesheet" href="css/sitenav.css">
 
 </head>
 
@@ -22,7 +22,7 @@
         <a href="index.html"></a>
       </div>
       <h1>
-        优惠券
+        商城导航
       </h1>
       <div class="appdown fr">
         <a href="javascript:;" title="手机app下载">
@@ -32,12 +32,8 @@
     </header>
 
     <!-- 商品详情部分   -->
-    <div class="mmb_coupon" id="mmb_coupon">
-      <div class="coupon_content">
-        <ul class="clearfix" id="coupon_nav">
-          <!-- 挖个坑 -->
-        </ul>
-      </div>
+    <div class="mmb_sitenav" id="mmb_sitenav">
+      <!-- 挖个坑 -->  
     </div>
 
     <!-- 底部  -->
@@ -59,22 +55,24 @@
     </footer>
   </div>
 
-  <!-- 优惠券导航模板 -->
-  <script type="text/html" id="coupon_nav_tmp">
+
+  <!-- 引入导航模板 -->
+  <script type="text/html" id="mmb_sitenav_tmp">
+    <div class="link clearfix">
     {{ each result v i }}
-    <li>
-      <a href="{{ v.couponLink }}?couponId={{ v.couponId }}">
-        <img src="{{ v.couponImg }}" alt=""><br>
-        {{ v.couponTitle }}
+      <a href="{{ v.navHref }}">
+        <img src="{{ v.navImg }}" alt="">
+        {{ v.navTitle }}
       </a>
-    </li>
     {{ /each }}
+    </div>
   </script>
+
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./js/adaptor.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
-  <script src="js/coupon.js"></script>
+  <script src="js/sitenav.js"></script>
 </body>
 
 </html>
