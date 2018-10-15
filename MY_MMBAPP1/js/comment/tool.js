@@ -1,7 +1,7 @@
 // 功能1 获取地址栏参数 并转成对象 
 function getUrlData() {
    // 得到参数 
-  var search = location.search;
+  var search = decodeURI(location.search);
   // 截取字符串 
   search = search.slice(1);
   // 将参数转成数组 

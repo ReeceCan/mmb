@@ -86,7 +86,7 @@
         <ul>
           {{ each result v i }}
           <li>
-            <a href="#">
+            <a href="productlist.html?pageid=1&categoryId={{ v.categoryId }}">
               <em class="top{{ i+1 }}">{{ v.brandId }}</em>
               <div class="inner">
                 <div class="tit">{{ v.brandName }}</div>
@@ -109,7 +109,7 @@
         <ul>
           {{ each result v i }}
           <li>
-            <a href="bijia.html?productid={{ v.productId }}" class="clearfix">
+            <a href="bijia.html?productid={{ v.productId }}&categoryId={{ v.categoryId }}" class="clearfix">
               <div class="pic">
                 {{@v.productImg}}
               </div>
@@ -171,7 +171,6 @@
         </ul>
       </div>
     </script>
-
     </div>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./js/adaptor.js"></script>

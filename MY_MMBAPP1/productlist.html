@@ -28,6 +28,7 @@
         </a>
       </div>
     </header>
+
     <!-- 搜索栏 . -->
     <section class="mmb_searh">
       <form action="#" class="search">
@@ -35,12 +36,16 @@
         <button>搜索</button>
       </form>
     </section>
+
     <!-- 商品列表部分  -->
     <section class="mmb_productlist" id="product_list">
+
+      <!-- 路径导航  -->
       <div class="product_list_title clearfix" id="nav">
         <!-- 挖个坑 -->
-        
       </div>
+
+      <!-- 商品列表部分  -->
       <div class="product_list" id="product">
        
           <!-- 挖个大坑 -->
@@ -71,9 +76,10 @@
       {{ each result v i }}
         <a href="index.html">首页</a>
         >
-        <a href="category.html">全部分类</a>
+        <a href="category.html">全部分类</a> 
         >
-        <a href="#" id="cate" data-cate="category">{{ v.category }}</a>
+        <a href="#" id="cate" data-cate="{{ v.category }}">{{ v.category }}</a>
+        >
       {{ /each }}
       <a href="#" class="select fr">筛选</a>
     </script>
@@ -81,10 +87,10 @@
 
     <!-- 产品模板  -->
     <script type="text/html" id="product_list_tmp">
-      <ul id="">
+      <ul>
         {{ each result v i }}
           <li class="clearfix">
-            <a href="bijia.html?productid={{ v.productId }}">
+            <a href="bijia.html?productid={{ v.productId }}&categoryId={{ v.categoryId }}">
               <div class="pic fl">
                   {{@v.productImg}}
               </div>
@@ -106,8 +112,8 @@
         <span class="fl" id="back"><a href="#">上一页</a></span>
         <span>
           <select name="select" id="selectPage" class="fl">
-            <%for(i = 1; i <= pageToatal; i ++) {%>
-              <option value="<%=i%>" <%if(i==1){%>selected<%}%>><%=i%>/<%=pageToatal%></option>
+            <%for(i = 1; i <= pageToatal; i++) {%>
+              <option value="<%=i%>" <%if(i==pageid){%>selected<%}%>><%=i%>/<%=pageToatal%></option>
             <%}%>
           </select>
         </span>
@@ -119,6 +125,7 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./js/adaptor.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/comment/tool.js"></script>
   <script src="js/productlist.js"></script>
 </body>
 

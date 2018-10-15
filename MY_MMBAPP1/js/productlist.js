@@ -1,89 +1,119 @@
 
 //功能1 通过地址栏参数动态获取数据  渲染页面  
 $(function () {
-  // 获取地址栏参数 
-  var search = decodeURI(location.search);
-  // 截取参数
-  var search = search.slice(1);
-  // 将参数转成数组 
-  var arr = search.split("&");//["categoryid=0", "category=电视", "pageid=1"]
-  // 遍历数组  取出键和值,存储到对象中 
-  var obj = {}; //用来存储参数 
-  arr.forEach(function ( v,i ) {
-     var key = v.split("=")[0];//键
-     var value = v.split("=")[1];//值
-     obj[key] = value;
 
-  });
-  // console.log(obj);
-  var categoryid = obj.categoryid;
+  // 获取地址栏参数 
+  var obj = getUrlData();
+
+  var categoryid = obj.categoryId;
   var pageid = obj.pageid;
+  console.log(obj);
   
+
   // 路径导航渲染 
-  
+
   // 发送ajax请求 
   $.ajax({
     type: "get",
     url: "http://127.0.0.1:9090/api/getcategorybyid",
-    data: {categoryid: categoryid},
+    data: { categoryid: categoryid },
     dataType: "json",
     success: function (info) {
       console.log(info);
-      
+
       // 绑定模板
-      var htmlStr = template("nav_tmp",info);
+      var htmlStr = template("nav_tmp", info);
       // 将数据渲染到页面中  
       $("#nav").html(htmlStr);
-    }
-  })
-
-  // 一进入页面渲染一次 
-  render(categoryid,pageid);
-
-  // 功能2 根据下拉选项跳转到对应页面 
-  // 检测select框的变化 
-  // 获取值 对应的option添加属性selected
-  // 通过获取的值渲染页面 
-  // 获取option值 
-  // var $options = $("#selectPage");
-  // console.log($options);
-  
-  
-  // var a = document.querySelectorAll("#back");
-  // console.log(a);
-  
-  
-  
-
-  // 功能3 点击上一页 跳转到上一页面  点击下一页 跳转到下一页面 
-  $("#back").click(function () {
-     
-  })
-  
-  
 
 
-  // 将渲染页面功能封装成一个函数 
-  function render(categoryid,pageid) {
-    $.ajax({
-      type: "get",
-      url: "http://127.0.0.1:9090/api/getproductlist",
-      data: {
-        categoryid: categoryid,
-        pageid: pageid
-      },
-      dataType: "json",
-      success: function (info) {
-        console.log(info);
-        var pageTotal = Math.ceil(info.totalCount/info.pagesize);
-        info.pageToatal = pageTotal;
-        
-        // 绑定模板
-        var htmlStr = template("product_list_tmp",info);
-        // 将数据渲染到页面中  
-        $("#product").html(htmlStr);
+      // 商品渲染  
+      // 一进入页面渲染一次 商品数据
+      render(categoryid, pageid);
+
+      // 将渲染页面功能封装成一个函数 
+      function render(categoryid, pageid) {
+
+        categoryid = categoryid || 0;
+        pageid = pageid || 1;
+
+        $.ajax({
+          type: "get",
+          url: "http://127.0.0.1:9090/api/getproductlist",
+          data: {
+            categoryid: categoryid,
+            pageid: pageid
+          },
+          dataType: "json",
+          success: function (info) {
+
+            // console.log(info);
+            var pageTotal = Math.ceil(info.totalCount / info.pagesize);
+            // 获取对应分类 
+            info.pageToatal = pageTotal;
+            info.pageid = pageid;
+
+            // 绑定模板
+            var htmlStr = template("product_list_tmp", info);
+            // 将数据渲染到页面中  
+            $("#product").html(htmlStr);
+            // 返回顶部
+            pagination();
+
+            // 将分页功能封装成一个函数 
+            function pagination() {
+              // 功能3 分页效果 
+              // 需要实现 
+              // (1) 点击上下页 pageid改变 select框值改变 (方法1  直接在模板引擎中渲染 方法2 直接添加selected属性 attr)  重新渲染页面 
+              // (2) 第一页时 上一页无效  最后一页时 下一页无效 
+              // (3) 当selected中值改变时 pageid改变  重新渲染页面 
+              // 点击上一页 
+              $("#product").on("click", "#back a", function () {
+
+                // 判断当前页为第一页时 不做跳转
+                if (pageid <= 1) {
+                  return false;
+                }
+                // 分页减1 
+                pageid--;
+
+                //  重新渲染页面 
+                render(categoryid, pageid);
+              });
+
+              // 点击下一页 pageid++ 
+              // 点击上一页 
+              $("#product").on("click", "#go a", function () {
+
+                if (pageid >= pageTotal) {
+                  return false;
+                }
+                // 分页加1 
+                pageid++;
+
+                //  重新渲染页面 
+                render(categoryid, pageid);
+              });
+
+              // (3) 当selected中值改变时 pageid改变  重新渲染页面 
+              $("#selectPage").change(function () {
+                console.log($("#selectPage").val());
+                // pageid改变 
+                pageid = $("#selectPage").val();
+                // 重新渲染页面 
+                render(categoryid, pageid);
+                document.documentElement.scrollTop = 0
+
+              });
+            }
+
+          }
+        });
       }
-    });
-  }
-  
+    }
+
+  });
+
+
+
 })

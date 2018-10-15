@@ -66,6 +66,9 @@
   color: #000;
   font-size: 16px;
 }
+.gs_list .popbox.visible {
+  display: block;
+}
 .gs_list .product_list {
   padding: 6px 0;
 }

@@ -38,5 +38,5 @@ $(function () {
 // (1) 点击事件  
 // (2) 点击返回顶部  scrolltop
 $("#toTop").click(function () {
-  window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+  window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 });

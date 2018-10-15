@@ -95,9 +95,10 @@
       {{ each result v i }}  
         <a href="index.html">首页</a>
         >
-        <a href="category.html">全部分类</a>
+        <a href="category.html">{{ category }}</a>
         >
-        <a href="#">电视</a>
+        <a href="#">{{ proName }}</a>
+        >
         <a href="#" class="select fr">筛选</a>
       {{ /each }}
     </script>
@@ -170,6 +171,7 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./js/adaptor.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/comment/tool.js"></script>
   <script src="js/bijia.js"></script>
 </body>
 
