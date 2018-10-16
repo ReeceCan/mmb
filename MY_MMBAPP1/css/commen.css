@@ -1,8 +1,9 @@
 .mmb_container {
-  background-color: #fff;
-}
-.mmb_foot {
+  width: 100%;
   background-color: #f1f1f1;
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .mmb_header_inlo {
   width: 100%;
@@ -37,6 +38,7 @@
   height: .44rem;
   line-height: .44rem;
   position: relative;
+  background-color: #f4483e;
 }
 .mmb_header .back,
 .mmb_header .appdown {
@@ -59,9 +61,10 @@
   padding: 0;
 }
 .mmb_header .appdown img {
+  width: .35rem;
+  height: .32rem;
   display: block;
-  margin: 0 auto;
-  margin-top: 5px;
+  margin: 5px auto;
 }
 .mmb_header a {
   display: block;
@@ -76,6 +79,33 @@
   color: #fff;
   font-weight: bold;
   text-align: center;
+}
+.mmb_searh {
+  background-color: #fff;
+  padding: .1rem;
+  position: relative;
+}
+.mmb_searh form.search {
+  padding-right: .7rem;
+}
+.mmb_searh input {
+  width: 100%;
+  height: .3rem;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: .15rem;
+  padding: 0 50px 0 30px;
+}
+.mmb_searh button {
+  border: none;
+  background-color: #ff841d;
+  color: #fff;
+  width: .63rem;
+  height: .3rem;
+  border-radius: .15rem;
+  position: absolute;
+  right: .1rem;
+  top: .1rem;
 }
 .mmb_cu_content .cu_content {
   padding: 4px 10px;
@@ -245,6 +275,91 @@
 .mmb_cu_content .list li .content {
   color: #606060;
   font-size: 15px;
+}
+.product_list_title {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: .38rem;
+  line-height: .36rem;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom, #ffffff 0, #ebebeb 100%);
+  font-size: 14px;
+}
+.product_list_title a.select {
+  display: block;
+  width: .6rem;
+  height: .28rem;
+  line-height: .28rem;
+  text-align: center;
+  border: none;
+  margin-top: 4px;
+  border-radius: 5px;
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 1px 2px #888;
+  background-image: linear-gradient(to bottom, #d7d7d7 0, #f5f5f5 100%);
+}
+.mmb_category .row {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ededed;
+}
+.mmb_category .category_title > li > a {
+  display: block;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  padding-left: 16px;
+  background: url("http://www.zuyushop.com/wap/images/arrow1.gif") no-repeat right;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 16px;
+}
+.mmb_category .category_title > li > a:last-child {
+  border: none;
+}
+.mmb_category .category_title > li:last-child li {
+  border-bottom: none;
+}
+.page_e {
+  height: .36rem;
+  margin-top: 10px;
+}
+.page_e span {
+  float: left;
+  display: block;
+  width: 33.3%;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  height: .36rem;
+}
+.page_e a {
+  display: block;
+  background-image: linear-gradient(to bottom, #f1f1f1 0, #d4d4d4 100%);
+  width: .82rem;
+  height: .33rem;
+  line-height: .33rem;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+.page_e select {
+  padding: 0 20px;
+  height: .34rem;
+  line-height: .34rem;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mmb_foot {
+  background-color: #f1f1f1;
 }
 .mmb_foot .foot_top {
   margin-top: 25px;

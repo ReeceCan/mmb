@@ -1,3 +1,9 @@
+.mmb_header {
+  background-color: #ff841d;
+}
+.mmb_container {
+  background-color: #fff;
+}
 .mmb_sitenav .link {
   margin: 10px auto;
   width: 2.8rem;

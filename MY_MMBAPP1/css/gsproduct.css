@@ -1,6 +1,9 @@
 .mmb_container {
   background-color: #f1f1f1;
 }
+.mmb_header {
+  background-color: #ff841d;
+}
 .gs_list .head {
   position: relative;
 }

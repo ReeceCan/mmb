@@ -16,3 +16,8 @@ function getUrlData() {
   return obj;
 }
 
+// 返回顶部 
+function toTop() {
+  document.documentElement.scrollTop = 0;
+}
+

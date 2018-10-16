@@ -19,15 +19,14 @@ $(function () {
 // 点击大标题 获取对应id值 进行渲染  
 
 $(function () {
-   // 获取大标题对应的id值 
-   
-   $("#row").on("click",".category_title>li>a",function () {
+
+   // 给大标题注册点击事件 事件委托 获取大标题对应的id值 
+  $("#row").on("click",".category_title>li>a",function () {
     
     $(this).siblings(".category_content").toggleClass("visible");
     // 获取对应id值 
     var id = $(this).data("id");
     var $that = $(this);    
-    // console.log(id);
     
     // 根据id发送ajax请求  并进行动态渲染 
     $.ajax({

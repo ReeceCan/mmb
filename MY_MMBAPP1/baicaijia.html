@@ -9,7 +9,7 @@
   <!-- 引入字体图标  -->
   <link rel="stylesheet" type="text/css" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/discountCommen.css">
+  <link rel="stylesheet" href="css/commen.css">
   <link rel="stylesheet" href="css/baicaijia.css">
 
 </head>
@@ -19,7 +19,9 @@
     <!-- 头部  -->
     <header class="mmb_header clearfix">
       <div class="back">
-        <a href="index.html"></a>
+        <a href="index.html">
+          <i class="iconfont icon-zuojiantou"></i>
+        </a>
       </div>
       <h1>
         白菜价-淘宝内部券
@@ -68,12 +70,14 @@
       </div>
     </footer>
   </div>
-
+<!-- <%if(i == 0) {%>-->
 
   <!-- 导航模板 -->
   <script type="text/html" id="baicaijia_head_tmp">
     {{ each result v i }}
-      <li <%if(i == 0) {%>class="current"<%}%> data-id="{{ v.titleId }}"><a href="#">{{ v.title }}</a></li>    
+      <li <%if(i == titleid) {%>class="current"<%}%> data-id="{{ v.titleId }}">
+        <a href="baicaijia.html?titleid={{ v.titleId }}">{{ v.title }}</a>
+      </li>    
     {{ /each }}
   </script>
 
@@ -120,6 +124,7 @@
   <!-- 引入区域滚动插件  -->
   <script src="./lib/iscroll/iscroll.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/comment/tool.js"></script>
   <script src="js/baicaijia.js"></script>
 </body>
 
